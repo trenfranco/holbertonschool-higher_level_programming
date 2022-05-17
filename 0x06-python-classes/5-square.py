@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""Square class"""
+
+
 class Square:
     """Private instance attribute: size"""
 
