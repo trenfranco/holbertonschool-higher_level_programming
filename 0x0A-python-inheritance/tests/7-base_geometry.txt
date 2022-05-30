@@ -49,3 +49,7 @@ TypeError: None must be an integer
 >>> bg.integer_validator("None", None)
 Traceback (most recent call last):
 TypeError: None must be an integer
+
+>>> bg.integer_validator("name", {"a": "jaja", "b": "jaje"})
+Traceback (most recent call last):
+TypeError: name must be an integer
