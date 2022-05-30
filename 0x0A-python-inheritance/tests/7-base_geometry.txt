@@ -44,4 +44,8 @@ TypeError: name must be an integer
 
 >>> bg.integer_validator(None, None)
 Traceback (most recent call last):
-TypeError: name must be an integer
+TypeError: None must be an integer
+
+>>> bg.integer_validator("None", None)
+Traceback (most recent call last):
+TypeError: None must be an integer
