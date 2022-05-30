@@ -25,3 +25,15 @@ ValueError: distance must be greater than 0
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
+
+>>> bg.integer_validator("name", [1, 2])
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", False)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", (1, 2))
+Traceback (most recent call last):
+TypeError: name must be an integer
