@@ -37,3 +37,11 @@ TypeError: name must be an integer
 >>> bg.integer_validator("name", (1, 2))
 Traceback (most recent call last):
 TypeError: name must be an integer
+
+>>> bg.integer_validator("name", None)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator(None, None)
+Traceback (most recent call last):
+TypeError: name must be an integer
