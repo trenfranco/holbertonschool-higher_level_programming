@@ -71,3 +71,19 @@ TypeError: name must be an integer
 >>> bg.integer_validator("hola", {1, 2})
 Traceback (most recent call last):
 TypeError: hola must be an integer
+
+>>> module_doc = __import__('7-base_geometry').__doc__
+>>> print(len(module_doc) > 0)
+True
+
+>>> class_doc = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> print(len(class_doc) > 0)
+True
+
+>>> function_doc = __import__('7-base_geometry').BaseGeometry.area.__doc__
+>>> print(len(function_doc) > 0)
+True
+
+>>> function_doc = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> print(len(function_doc) > 0)
+True
