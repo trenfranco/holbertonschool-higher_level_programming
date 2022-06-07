@@ -17,14 +17,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """getter prop"""
         return self.width
 
     @size.setter
     def size(self, value):
+        """setter prop"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """update to square"""
         if len(args) > 0:
             if len(args) > 0:
                 self.id = args[0]
