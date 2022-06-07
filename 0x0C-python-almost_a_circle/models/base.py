@@ -2,6 +2,9 @@
 """New class"""
 
 
+import json
+
+
 class Base:
     """Class Base"""
 
@@ -13,3 +16,9 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """dictionaries to json string"""
+        a = json.dumps(list_dictionaries)
+        return a
