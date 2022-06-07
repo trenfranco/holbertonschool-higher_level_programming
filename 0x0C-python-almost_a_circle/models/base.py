@@ -36,5 +36,7 @@ class Base:
                 a.append(i.to_dictionary())
         if a == []:
             a = "[]"
+        else:
+            a = cls.to_json_string(a)
         with open(filename, 'w') as txt:
             txt.write(a)
