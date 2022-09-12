@@ -5,7 +5,7 @@ const axios = require('axios');
 let count = 0;
 
 axios
-  .get('https://swapi-api.hbtn.io/api/films/')
+  .get(process.argv[2])
   .then(request => {
     const films = request.data.results;
     for (let i = 0; i < films.length; i++) {
