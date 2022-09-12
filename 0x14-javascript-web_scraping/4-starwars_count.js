@@ -9,8 +9,9 @@ axios
   .then(request => {
     const films = request.data.results;
     for (let i = 0; i < films.length; i++) {
-      if (films[i].characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-        count += 1;
+      const chars = films[i].characters;
+      for (let i2 = 0; i2 < chars.length; i2++) {
+        if (chars[i2].includes('18')) { count++; }
       }
     }
     console.log(count);
