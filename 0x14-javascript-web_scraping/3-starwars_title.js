@@ -1,5 +1,5 @@
 #!/usr/bin/node
-//request get to get the data (json)
+// request get to get the data (json)
 const axios = require('axios');
 
 axios
