@@ -12,12 +12,13 @@ axios
   .then(request => {
     todoList = request.data;
     for (let i = 0; i < todoList.length; i++) {
+      let userId = todoList[i].userId;
       if (todoList[i].completed === true) {
-        const userId = todoList[i].userId;
+        userId = todoList[i].userId;
         donetasks++;
         tasks[userId] = donetasks;
-        if (userId !== todoList[i + 1].userId && i < todoList.length - 1) { donetasks = 0; }
       }
+      if (todoList[i + 1] && userId !== todoList[i + 1].userId) { donetasks = 0; }
     }
     console.log(tasks);
   });
