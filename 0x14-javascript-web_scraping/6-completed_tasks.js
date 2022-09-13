@@ -21,4 +21,7 @@ axios
       if (todoList[i + 1] && userId !== todoList[i + 1].userId) { donetasks = 0; }
     }
     console.log(tasks);
+  })
+  .catch(error => {
+    console.log(error);
   });
